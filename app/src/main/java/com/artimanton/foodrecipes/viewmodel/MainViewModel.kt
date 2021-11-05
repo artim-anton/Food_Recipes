@@ -1,4 +1,4 @@
-package com.artimanton.foodrecipes
+package com.artimanton.foodrecipes.viewmodel
 
 import android.app.Application
 import android.content.Context
@@ -9,12 +9,15 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import com.artimanton.foodrecipes.data.Repository
+import com.artimanton.foodrecipes.models.FoodRecipe
 import com.artimanton.foodrecipes.util.NetworkResult
-import com.example.foody.models.FoodRecipe
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import retrofit2.Response
+import javax.inject.Inject
 
-class MainViewModel @ViewModelInject constructor(
+@HiltViewModel
+class MainViewModel @Inject constructor(
     private val repository: Repository,
     application: Application):AndroidViewModel(application) {
 

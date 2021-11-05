@@ -1,6 +1,6 @@
 package com.artimanton.foodrecipes.data.network
 
-import com.example.foody.models.FoodRecipe
+import com.artimanton.foodrecipes.models.FoodRecipe
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.QueryMap

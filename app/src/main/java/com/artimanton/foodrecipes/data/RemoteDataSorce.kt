@@ -1,7 +1,8 @@
 package com.artimanton.foodrecipes.data
 
 import com.artimanton.foodrecipes.data.network.FoodRecipesApi
-import com.example.foody.models.FoodRecipe
+import com.artimanton.foodrecipes.models.FoodRecipe
+
 import retrofit2.Response
 import javax.inject.Inject
 
