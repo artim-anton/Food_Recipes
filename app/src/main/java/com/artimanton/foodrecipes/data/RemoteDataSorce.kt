@@ -8,6 +8,7 @@ import javax.inject.Inject
 
 class RemoteDataSorce @Inject constructor(
     private val foodRecipesApi: FoodRecipesApi
+
 ){
 
     suspend fun getRecipes(queries: Map<String, String>):Response<FoodRecipe>{

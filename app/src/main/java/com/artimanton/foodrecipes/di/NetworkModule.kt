@@ -1,4 +1,4 @@
-package com.artimanton.foodrecipes
+package com.artimanton.foodrecipes.di
 
 
 import com.artimanton.foodrecipes.util.Constrans.Companion.BASE_URL
