@@ -7,8 +7,8 @@ import com.artimanton.foodrecipes.util.Constrans.Companion.RECIPES_TABLE
 
 @Entity(tableName = RECIPES_TABLE)
 class RecipesEntity(
-    var foodRecipes: FoodRecipe
-){
+    var foodRecipe: FoodRecipe
+) {
     @PrimaryKey(autoGenerate = false)
     var id: Int = 0
 }

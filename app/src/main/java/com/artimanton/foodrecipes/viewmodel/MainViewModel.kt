@@ -25,7 +25,9 @@ class MainViewModel @Inject constructor(
     val readRecipes: LiveData<List<RecipesEntity>> = repository.local.readDatabase().asLiveData()
 
     private fun insertRecipes(recipesEntity: RecipesEntity) =
-        viewModelScope.launch { Dispatchers.IO }
+        viewModelScope.launch(Dispatchers.IO) {
+            repository.local.insertRecipes(recipesEntity)
+        }
 
     /** RETROFIT */
     val recipesResponse: MutableLiveData<NetworkResult<FoodRecipe>> = MutableLiveData()

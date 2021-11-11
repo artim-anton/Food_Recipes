@@ -6,7 +6,7 @@ import com.artimanton.foodrecipes.models.FoodRecipe
 import retrofit2.Response
 import javax.inject.Inject
 
-class RemoteDataSorce @Inject constructor(
+class RemoteDataSource @Inject constructor(
     private val foodRecipesApi: FoodRecipesApi
 
 ){

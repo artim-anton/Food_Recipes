@@ -7,10 +7,12 @@ import androidx.room.Query
 import kotlinx.coroutines.flow.Flow
 
 @Dao
-abstract class RecipesDao {
+interface RecipesDao {
+
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insertRecipes(recipesEntity: RecipesEntity) {}
+    suspend fun insertRecipes(recipesEntity: RecipesEntity)
 
     @Query("SELECT * FROM recipes_table ORDER BY id ASC")
-    abstract fun readRecipes():Flow<List<RecipesEntity>>
+    fun readRecipes(): Flow<List<RecipesEntity>>
+
 }
