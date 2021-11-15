@@ -28,4 +28,6 @@
     <string name="low_fodmap">Low FODMAP</string>
     <string name="whole30">Whole30</string>
     <string name="apply">Apply</string>
+    <string name="diet_type">Diet Type</string>
+    <string name="vegetarian">Vegetarian</string>
 </resources>

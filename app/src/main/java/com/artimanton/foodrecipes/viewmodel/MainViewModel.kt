@@ -4,7 +4,6 @@ import android.app.Application
 import android.content.Context
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
-import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.*
 import com.artimanton.foodrecipes.data.Repository
 import com.artimanton.foodrecipes.data.database.RecipesEntity
@@ -88,11 +87,11 @@ class MainViewModel @Inject constructor(
             ) as ConnectivityManager
             val activeNetwork = connectivityManeger.activeNetwork ?: return false
             val capbilities = connectivityManeger.getNetworkCapabilities(activeNetwork) ?: return false
-            return when{
-                capbilities.hasTransport(NetworkCapabilities.TRANSPORT_WIFI) -> return true
-                capbilities.hasTransport(NetworkCapabilities.TRANSPORT_CELLULAR) -> return true
-                capbilities.hasTransport(NetworkCapabilities.TRANSPORT_ETHERNET) -> return true
-                else -> return false
+            return return when{
+                capbilities.hasTransport(NetworkCapabilities.TRANSPORT_WIFI) -> true
+                capbilities.hasTransport(NetworkCapabilities.TRANSPORT_CELLULAR) -> true
+                capbilities.hasTransport(NetworkCapabilities.TRANSPORT_ETHERNET) -> true
+                else -> false
 
             }
         }
